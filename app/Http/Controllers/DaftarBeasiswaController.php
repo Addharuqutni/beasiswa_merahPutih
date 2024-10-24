@@ -56,6 +56,19 @@ class DaftarBeasiswaController extends Controller
         ]);
     }
 
+    //fungsi menampilkan IPK dan NIM yang terdapat pada database
+    public function semua_ipk()
+    {
+        $data = ipk::select('nim', 'ipk')->get();
+
+        // view dalam JSON
+        return response()->json([
+            'status' => true,
+            'data' => $data
+        ]);
+    }
+
+
     //fungsi untuk mengirim data yang sudah disubmit di form ke database
     public function daftar(Request $request)
     {
@@ -84,7 +97,7 @@ class DaftarBeasiswaController extends Controller
                     } elseif ($request->beasiswa == 'kip') {
                         $message = 'Anda sudah mendaftar beasiswa Kartu Indonesia Pintar (KIP).';
                     }
-            
+
                     Session::flash('warning', $message);
                     return redirect()->back();
                 }

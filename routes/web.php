@@ -8,6 +8,7 @@ Route::get('/', [DaftarBeasiswaController::class, 'index']);
 
 # menampilkan halaman cek nim dengan format json
 Route::get('cekipk/{nim}', [DaftarBeasiswaController::class, 'cek_ipk']);
+Route::get('cekipk', [DaftarBeasiswaController::class, 'semua_ipk']);
 
 # menampilkan halaman daftar beasiswa
 Route::get('daftar', [DaftarBeasiswaController::class, 'daftar_view']);
