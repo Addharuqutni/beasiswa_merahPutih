@@ -2,7 +2,7 @@
 
 ## Persyaratan Sistem
 
--   PHP versi 7.3 atau yang lebih baru
+-   PHP versi 7.3 atau terbaru
 -   Composer
 -   Database MySQL
 -   NPM (Node Package Manager)
@@ -24,7 +24,8 @@ Instal Dependensi yang diperlukan.
   npm install
 ```
 
-Ubah Konfigurasi Database: Salin file .env.example menjadi .env. Sesuaikan database anda di file .env.
+Ubah Konfigurasi Database: 
+Salin file .env.example menjadi .env. Sesuaikan database anda di file .env.
 
 Generate Aplikasi Key untuk menghasilkan kunci aplikasi:
 
